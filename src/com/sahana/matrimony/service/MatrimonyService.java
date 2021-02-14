@@ -1,13 +1,17 @@
 package com.sahana.matrimony.service;
 
-import java.util.List;
-
-import com.sahana.matrimony.dto.Bride;
+import com.sahana.matrimony.dto.BrideDTO;
 
 public interface MatrimonyService {
-	public List<Bride> getAllBride();
 
-	public void createBride();
+	public BrideDTO ValidateGetBride(int id);
+
+	public int validateAndCreateBride(BrideDTO bride);
+
 	
+
+	public int updateBride(int id, String phone_number);
+	
+	public int DeleteBride(int id);
 
 }

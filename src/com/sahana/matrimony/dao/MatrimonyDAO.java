@@ -1,11 +1,13 @@
 package com.sahana.matrimony.dao;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.sahana.matrimony.dto.BrideDTO;
 
 public interface MatrimonyDAO {
-	public void createDataBaseConnection() throws SQLException;
-	
-	public ResultSet getAll(String sqlQuery)throws SQLException;
+	public BrideDTO getById(int id);
 
+	public int create(BrideDTO bride);
+
+	public int update(int id,String phone_number);
+	
+	public int DeleteBride(int id);
 }
